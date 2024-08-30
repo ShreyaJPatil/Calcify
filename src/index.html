@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcify</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gradient-to-br from-purple-800 to-pink-600 min-h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class="flex flex-col bg-gray-900 text-white w-20 md:w-20 lg:w-64 h-screen transition-all duration-300">
+      <div class="flex items-center justify-between p-4">
+        <div class="logo flex items-center">
+          <i class="bx bxs-calculator text-3xl"></i>
+          <span id="logo-text" class="ml-2 font-bold text-lg md:text-2xl hidden lg:block">Calcify</span>
+        </div>
+        <!-- <i id="btn" class="bx bx-menu cursor-pointer text-xl sm:hidden lg:visible"></i> -->
+      </div>
+      <hr class="border-gray-700" />
+      <div class="flex items-center p-4">
+        <img src="/src/images/shreya.jpg" alt="user" class="user-img w-12 h-12 rounded-full border-2 border-white" />
+        <p id="user-name" class="ml-4 text-lg font-semibold hidden lg:block">Shreya</p>
+      </div>
+      <hr class="border-gray-700" />
+      <nav class="flex-1 px-2">
+        <ul>
+          <li class="my-2">
+            <a href="basicCalsi.html" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-math text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Basic Calculator</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="ageCalsi.html" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-chevron-up-square text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Age Calculator</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="BmiCalculator.html" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-speaker text-2xl"></i>
+              <span class="ml-4 hidden lg:block">BMI Calculator</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="1_Corency_Index.html" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-money-withdraw text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Currency Conv</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="2_Temp_C.html" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bxs-thermometer text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Temp Conv</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bxl-stack-overflow text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Weight Conv</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="#noToWord" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bxl-wordpress text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Num to Word</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="#no" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-cog text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Settings</span>
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="#no" class="flex items-center p-2 rounded-lg hover:bg-white hover:text-gray-900">
+              <i class="bx bx-log-out text-2xl"></i>
+              <span class="ml-4 hidden lg:block">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Include script at the end of the body -->
+    <script>
+      const btn = document.querySelector("#btn");
+      const sidebar = document.querySelector("#sidebar");
+      const logoText = document.querySelector("#logo-text");
+      const userName = document.querySelector("#user-name");
+
+      btn.onclick = function () {
+        sidebar.classList.toggle("lg:w-64");
+        sidebar.classList.toggle("w-20");
+        logoText.classList.toggle("hidden");
+        userName.classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
